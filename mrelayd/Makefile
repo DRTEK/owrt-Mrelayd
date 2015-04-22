@@ -11,7 +11,7 @@ PKG_NAME:=mrelayd
 PKG_VERSION:=2015-04-22
 PKG_RELEASE=$(PKG_SOURCE_VERSION)
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
+PKG_SOURCE:=https://codeload.github.com/DRTEK/mrelayd/zip/master
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_URL:=https://github.com/DRTEK/mrelayd.git
 PKG_SOURCE_PROTO:=git
