@@ -11,12 +11,11 @@ PKG_NAME:=mrelayd
 PKG_VERSION:=2015-04-22
 PKG_RELEASE=$(PKG_SOURCE_VERSION)
 
-PKG_SOURCE:=https://codeload.github.com/DRTEK/mrelayd/zip/master
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_URL:=https://github.com/DRTEK/mrelayd.git
+PKG_SOURCE_URL:=git://github.com/DRTEK/relayd.git
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_VERSION:=V1
-
+PKG_SOURCE_VERSION:=1938220415
 PKG_MAINTAINER:=MK <mkoseoglu@drtek.com.tr>
 PKG_LICENSE:=GPL-2.0
 
@@ -35,7 +34,7 @@ TARGET_CFLAGS += -I$(STAGING_DIR)/usr/include
 
 define Package/mrelayd/install
 	$(INSTALL_DIR) $(1)/usr/sbin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mrelayd $(1)/usr/sbin/mrelayd
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/relayd $(1)/usr/sbin/relayd
 	$(INSTALL_DIR) $(1)/etc/hotplug.d/iface
 	$(INSTALL_DATA) ./files/relay.hotplug $(1)/etc/hotplug.d/iface/30-relay
 	$(INSTALL_DIR) $(1)/etc/init.d
